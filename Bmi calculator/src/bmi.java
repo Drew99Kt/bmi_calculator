@@ -7,7 +7,7 @@ public class bmi {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//test
+		//test 2
 				//String height;
 				//height=JOptionPane.showInputDialog("how tall are you");
 				//System.out.println(height);
