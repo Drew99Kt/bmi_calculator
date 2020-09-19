@@ -24,8 +24,8 @@ public class bmi {
     	int result = JOptionPane.showConfirmDialog(null, myPanel, 
              "How tall are you", JOptionPane.OK_CANCEL_OPTION);
     	if (result == JOptionPane.OK_OPTION) {
-    		//System.out.println("x value: " + feet.getText());
-    		//System.out.println("y value: " + inches.getText()); 
+    		
+    		
     		{
     	   	System.out.println(result);
     	   	
