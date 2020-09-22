@@ -27,19 +27,19 @@ public class bmi {
     		
     		
     		{
-    	   	 System.out.println(result);
+    	   	  System.out.println(result);
     	   	
-    	   	 String feetMem= feet.getText();
-    	   	 int feet1 = Integer.parseInt(feetMem);
+    	   	  String feetMem= feet.getText();
+    	   	  int feet1 = Integer.parseInt(feetMem);
     	  
     	   	
     	   
-    	      String inchesMem= inches.getText();
-    	   	  int inches1 = Integer.parseInt(inchesMem); //if you enter zero, it crashes
+    	       String inchesMem= inches.getText();
+    	   	   int inches1 = Integer.parseInt(inchesMem); //if you enter nothing, it crashes
     	   	
-    	    	//JTextField feet = new JTextField("-5");
-    	      // 	String text = feet.getText();
-    	      //int xaxis1 = Integer.parseInt(text);
+    	       //JTextField feet = new JTextField("-5");
+    	       // 	String text = feet.getText();
+    	       //int xaxis1 = Integer.parseInt(text);
     	    	
 		
 		       //double height= Integer.parseInt(JOptionPane.showInputDialog("how tall are you in inches"));
@@ -57,10 +57,32 @@ public class bmi {
 		        
 		       double bmiWeight= 703* weight;
 		       double bmiHeight= (int) Math.pow(adjustedHeight2, 2);
-		       double bmiFinal= bmiWeight/bmiHeight;
+		       int bmiFinal= (int) (bmiWeight/bmiHeight);
 		      
 		        
-		       JOptionPane.showMessageDialog(null, bmiFinal);
+		       
+		       	/*Underweight: < 18.5
+
+				Normal weight: 18.5 - 24.9
+
+				Overweight: 25 - 29.9
+
+				Obese: ≥ 30*/
+		     
+		       
+		       if (bmiFinal >= 0 && bmiFinal <= 18.5) {
+		    	   JOptionPane.showMessageDialog(null,"YourBmi is "+bmiFinal+ ", your underweight");
+		       }
+		       else if (bmiFinal >= 18.5 && bmiFinal <= 24.9){
+		    	   JOptionPane.showMessageDialog(null,"Your Bmi is "+ bmiFinal +", your weight is normal");
+		       }
+		       else if (bmiFinal >= 25 && bmiFinal <=29.9) {
+		    	   JOptionPane.showMessageDialog (null,"Your Bmi is "+bmiFinal+ ", Your overweight");
+		       }
+		       else if (bmiFinal >=29.9 && bmiFinal <=100) {
+		    	   JOptionPane.showMessageDialog(null,"Your Bmi is " +bmiFinal + ", Your Obese");
+		       }
+		       
 		        
 		      
 		        
