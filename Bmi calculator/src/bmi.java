@@ -14,12 +14,14 @@ public class bmi {
 			public static JPanel myPanel;
 			public static JLabel feet;
 			public static JLabel inches;
+			public static JLabel weight;
 
 	        public static void main(String[] args ) {
 			
 		
 		    JTextField feet = new JTextField(5);
             JTextField inches = new JTextField(5);
+            JTextField weight = new JTextField(5);
 
             myPanel = new JPanel();
             myPanel.add(new JLabel("feet:"));
@@ -27,16 +29,19 @@ public class bmi {
             myPanel.add(Box.createHorizontalStrut(15)); // a spacer
             myPanel.add(new JLabel("inches:"));
             myPanel.add(inches);
+            myPanel.add(new JLabel("weight:"));
+            myPanel.add(weight);
 	        
             int result = JOptionPane.showConfirmDialog(null, myPanel, 
-             "How tall are you", JOptionPane.OK_CANCEL_OPTION);
+             "Please enter height and weight", JOptionPane.OK_CANCEL_OPTION);
     	    if (result == JOptionPane.OK_OPTION);
 	        
 	        
     		
 	        
-	    
-    	   	  //System.out.println(result);
+    	    String weightMem=weight.getText();
+    	    int weight1= Integer.parseInt(weightMem);
+    	   	 
     	   	
     	   	  String feetMem= feet.getText();
     	   	  int feet1 = Integer.parseInt(feetMem);
@@ -48,7 +53,7 @@ public class bmi {
     	   	
     	    
 		        
-		       double weight= Integer.parseInt (JOptionPane.showInputDialog( "how much do you weigh"));
+		      // double weight= Integer.parseInt (JOptionPane.showInputDialog( "how much do you weigh"));
 		        
 		       
 		       int footMeasurement= 12;
@@ -58,7 +63,7 @@ public class bmi {
 		       int adjustedHeight2= adjustedHeight + inches1;
 		
 		        
-		       double bmiWeight= 703* weight;
+		       double bmiWeight= 703* weight1;
 		       double bmiHeight= (int) Math.pow(adjustedHeight2, 2);
 		       int bmiFinal= (int) (bmiWeight/bmiHeight);{
 		      
